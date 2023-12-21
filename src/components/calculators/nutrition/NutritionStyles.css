@@ -1,0 +1,35 @@
+h4{
+    font-family: Copperplate-Bold;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+.delete-icon{
+    height: 1.75rem;
+    width: 1.75rem;
+    position: relative;
+}
+.delete-icon i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.btn-main{
+    background-color: var(--secondary-color);
+    font-size: .8rem;
+}
+.btn-main:hover{
+    background-color: #25262b;
+}
+
+h5{
+    font-family: Copperplate-Bold;
+    margin: 1.5rem auto;
+}
+.item-form{border-bottom: var(--dark-grey) 1px solid;}
+
+@media only screen and (min-width:1000px) {
+    .item-form{
+      display: flex;
+    }
+}

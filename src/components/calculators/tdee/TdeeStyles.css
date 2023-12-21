@@ -1,0 +1,106 @@
+.title{
+    display: flex;
+    align-items: center;
+    border-bottom: var(--dark-grey) 1px solid;
+}
+.title-icon{
+    height: 1.5rem;
+    margin-right: 1rem;
+}
+
+h1{
+    font-family: Copperplate-Bold;
+    font-size: 2rem;
+    margin: auto 0;
+}
+
+h2{
+    font-family: Copperplate-Bold;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+p{
+    font-size: .6rem;
+    color: #909296;
+}
+
+.form-label{
+    display: block;
+    font-size: .7rem;
+}
+.form-input{
+    display: block;
+    font-size: .7rem;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: #25262b;
+    background-clip: padding-box;
+    border: #DEE2E6;
+    border-radius: .375rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+input[type=number]::-webkit-inner-spin-button {-webkit-appearance: none;}
+
+input[type="radio"] {
+    background-color: var(--secondary-color);
+    border-color: #25262b;
+    margin-top: -1px;
+    vertical-align: middle;
+    margin-right: .5rem;
+}
+.table{
+    font-size:.8rem;
+    padding-bottom: 3rem;
+}
+.table tbody{
+    font-size: .7rem;
+}
+[id^='table-head-']{
+    font-family: Copperplate-Bold;
+    color: var(--font-color);
+}
+
+.table-hover tbody tr{cursor: pointer;}
+.table-hover tr:hover{background-color: #25262b;}
+.table-hover thead tr:hover{background-color: inherit;}
+.table-hover #active *{
+    font-family: Copperplate-Bold;
+    color: #1971C2;
+}
+
+.input-icon{
+    height: 1rem;
+    position: absolute;
+    top: 50%;
+    transform: translate(.5rem,-50%);
+    pointer-events: none;
+}
+
+#actual-tdee-label{
+    font-size: .7rem;
+    font-family: Copperplate-Bold;
+}
+#actual-tdee{
+    padding-left: 2rem;
+}
+.choose-plan{
+    width: fit-content;
+    margin: auto;
+}
+.form-check{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+}
+.form-check-label{
+    font-size:.8rem;
+}
+
+.label-unit{
+    margin-left:.1rem;
+    font-size: .6rem;
+}

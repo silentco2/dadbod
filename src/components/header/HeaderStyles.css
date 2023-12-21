@@ -1,0 +1,74 @@
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.logo{
+  height: 5rem;
+  padding: 2.5px;
+  margin: 5px;
+}
+
+.social-icons{
+  display: flex;
+  align-items: center;
+  margin: 5px;
+  padding: 2.5px;
+  gap: 1rem;
+}
+
+.navbar-collapse.collapsing {
+  -webkit-transition: height 0.01s;
+  -moz-transition: height 0.01s;
+  -ms-transition: height 0.01s;
+  -o-transition: height 0.01s;
+  transition: height 0.01s;
+}
+
+.icon,.icon::before,.icon::after{
+  width: 3rem;
+  height: 2px;
+  background-color: var(--grey);
+  transition: all .2s;
+}
+
+.icon::before,.icon::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+}
+
+.icon{position: relative;}
+
+.icon::before{transform: rotate(135deg);}
+
+.icon::after{transform: rotate(-135deg);}
+
+.navbar-toggler{
+  height: 3rem;
+  width: 3rem;
+  display: none;
+}
+
+/* checked */
+.icon:not(.collapsed .icon){background-color: transparent;}
+
+.collapsed .icon::before{
+  top:-.8rem;
+  transform: rotate(0deg);
+}
+
+.collapsed .icon::after{
+  top: .8rem;
+  transform: rotate(0deg);
+}
+
+@media only screen and (max-width:800px) {
+    .navbar-toggler{
+      display: block;
+    }
+}
