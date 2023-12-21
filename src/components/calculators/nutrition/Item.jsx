@@ -12,6 +12,7 @@ function Item({dataKey, itemID, deleteItem, btnState, setTotalProtein, setTotalC
     const pro = actualServing*event.target.value/serving
     inputTotal(arr=>arr.map((i,idx)=>idx==dataKey?pro:i))
   }
+  function disableChar(event) {(event.key === 'e'||event.key === '+'||event.key === '-') && event.preventDefault()}
   return (
     <div className="container rounded px-3" style={{border:'var(--dark-grey) 1px solid'}}>
         <div className="item-head mt-2 d-flex justify-content-between">
@@ -21,30 +22,30 @@ function Item({dataKey, itemID, deleteItem, btnState, setTotalProtein, setTotalC
         <div className="form-row item-form">
             <div className="col-sm mb-3 mx-1 required">
                 <label className="form-label" htmlFor="serving-size">Serving size</label>
-                <input type="number" value={serving} onChange={e=>setServing(e.target.value)} className="form-input" id="serving-size" required/>
+                <input type="number" onKeyDown={ (event) => disableChar(event)} value={serving} onChange={e=>setServing(e.target.value)} className="form-input" id="serving-size" required/>
             </div>
             <div className="col-sm mb-3 mx-1">
                 <label className="form-label" htmlFor="protein">Protein</label>
-                <input type="number" value={protein} onChange={e=>changeInput(e,setProtein,setTotalProtein)} className="form-input" id="protein"/>
+                <input type="number" onKeyDown={ (event) => disableChar(event)} value={protein} onChange={e=>changeInput(e,setProtein,setTotalProtein)} className="form-input" id="protein"/>
             </div>
             <div className="col-sm mb-3 mx-1">
                 <label className="form-label" htmlFor="carbs">Carbs</label>
-                <input type="number" value={carbs} onChange={e=>changeInput(e,setCarbs,setTotalCarbs)} className="form-input" id="carbs"/>
+                <input type="number" onKeyDown={ (event) => disableChar(event)} value={carbs} onChange={e=>changeInput(e,setCarbs,setTotalCarbs)} className="form-input" id="carbs"/>
             </div>
             <div className="col-sm mb-3 mx-1">
                 <label className="form-label" htmlFor="fat">Fat</label>
-                <input type="number" value={fat} onChange={e=>changeInput(e,setFat,setTotalFat)} className="form-input" id="fat"/>
+                <input type="number" onKeyDown={ (event) => disableChar(event)} value={fat} onChange={e=>changeInput(e,setFat,setTotalFat)} className="form-input" id="fat"/>
             </div>
             <div className="col-sm mb-3 mx-1">
                 <label className="form-label" htmlFor="calories">Calories</label>
-                <input type="number" value={calories} onChange={e=>changeInput(e,setCalories,setTotalCalories)} className="form-input" id="calories"/>
+                <input type="number" onKeyDown={ (event) => disableChar(event)} value={calories} onChange={e=>changeInput(e,setCalories,setTotalCalories)} className="form-input" id="calories"/>
             </div>
         </div>
         <div className="form-row d-flex">
             <div className="w-auto col-md-3 my-3 mx-1 required">
                 <label className="form-label mb-0" htmlFor="your-serving">Your Serving</label>
                 <p className="mb-1">How much are you actually consuming?</p>
-                <input type="number" value={actualServing} onChange={e=>setActualServing(e.target.value)} className="form-input" id="your-serving" required/>
+                <input type="number" onKeyDown={ (event) => disableChar(event)} value={actualServing} onChange={e=>setActualServing(e.target.value)} className="form-input" id="your-serving" required/>
             </div>
         </div>
 
